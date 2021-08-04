@@ -102,8 +102,12 @@ export function Room(){
                   content={question.content} 
                   author={question.author} 
                   key={question.id}
-                >
-                  <button 
+
+                  isAnswered={question.isAnswered}
+                  isHighlighted={question.isHighlighted}
+                > {
+                  !question.isAnswered && (
+                    <button 
                     className={`like-button ${question.likeId ? 'liked': ''}`}
                     type="button"
                     aria-label="Marcar como gostei"
@@ -115,6 +119,9 @@ export function Room(){
                    </svg>
 
                   </button>
+
+                  )
+                }
                 </Question>
               )
             })

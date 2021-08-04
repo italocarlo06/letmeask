@@ -13,6 +13,20 @@
     margin-top: 8px;
   }
 
+  
+  &.highlighted{
+    background: #f4f0ff;
+    border: 1px solid #835Afd;
+    
+    footer .user-info span {
+      color: #29292e;
+    }
+  }
+
+  &.answered{
+    background: #DBDCDD;
+  }
+  
   footer{
     display: flex;
     justify-content: space-between;
@@ -39,6 +53,10 @@
       }
     }
 
+    > div {
+      display: flex;
+      gap: 16px;
+    }
 
     button {
       border: 0;
